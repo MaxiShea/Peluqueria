@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
    
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/usuarios/perfil/${_id}`
+        `${process.env.REACT_APP_BACKEND_URL}/api/usuarios/perfil/${_id}`
       );
       const { data } = response;
      

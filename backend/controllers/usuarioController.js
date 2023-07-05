@@ -76,6 +76,14 @@ const autenticar = async (req, res) => {
   
 };
 
+const obtenerUsuarios = async (req, res) => {
+  try {
+    const usuarios = await Usuario.find().select("-password -createdAt -updatedAt -__v");
+    res.json(usuarios);
+  } catch (error) {
+    res.status(500).json({ msg: "Hubo un error al obtener los usuarios" });
+  }
+};
 
 const perfil = async (req, res) => {
   const userId = req.params._id; // Obtén el valor de _id desde los parámetros de la solicitud
@@ -98,6 +106,6 @@ const perfil = async (req, res) => {
 export {
   registrar,
   autenticar,
- 
+  obtenerUsuarios,
   perfil,
 };
