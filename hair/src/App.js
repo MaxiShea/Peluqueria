@@ -30,6 +30,7 @@ import NotFoundPage from './components/NotFoundPage/NotFoundPage';
 
 
 
+
 function App() {
   
   return (
@@ -49,9 +50,11 @@ function App() {
           <Route path='/products/:id' element={<ProductDetail  />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/perfil' element={<Perfil />} />
+
           <Route path='/admin' element={<AdminComponent />} />
           <Route path='/BuyForm' element={<BuyForm />} />           
           <Route path='*' element={<NotFoundPage/>} />
+
 
 
 
