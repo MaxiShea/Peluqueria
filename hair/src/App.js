@@ -19,8 +19,11 @@ import { AuthProvider } from './context/Auth';
 import Perfil from './components/Perfil/Perfil';
 import Login from './components/Login/login';
 
-import Admin from './components/admin/Admin';
+
+import AdminComponent from './components/admin/AdminComponent';
+
 import BuyForm from './components/BuyForm/BuyForm';
+
 
 
 
@@ -45,7 +48,9 @@ function App() {
           <Route path='/products/:id' element={<ProductDetail  />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/perfil' element={<Perfil />} />
-          <Route path='/admin' element={<Admin />} />
+
+          <Route path='/admin' element={<AdminComponent />} />
+
           <Route path='/BuyForm' element={<BuyForm />} />
 
 
