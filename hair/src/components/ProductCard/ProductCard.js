@@ -51,7 +51,7 @@ const ProductCard = ({product, setListView, listView}) => {
             exit={{ y: "150px", height: "0px", opacity: 0 }}
             transition={{ duration: .5 }}
             className={style.containerDescription}>
-            <p>{product.description}</p>
+            <p style={{"color":"#fff"}}>{product.description}</p>
           </motion.section>
 
 
